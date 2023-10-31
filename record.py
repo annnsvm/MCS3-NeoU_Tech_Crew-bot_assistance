@@ -1,0 +1,2 @@
+class AddressBookRecord():
+    pass

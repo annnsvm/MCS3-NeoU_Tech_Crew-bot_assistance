@@ -1,5 +1,5 @@
 from field import Field
 
 
-class Phone(Field):
+class Mail(Field):
     pass
