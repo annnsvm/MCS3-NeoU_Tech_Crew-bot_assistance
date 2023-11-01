@@ -7,7 +7,6 @@ from classes.AddressBook import AddressBook
 
 def main():
     book = AddressBook()
-
     print("Welcome to the assistant bot!")
 
     while True:

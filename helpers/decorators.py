@@ -13,6 +13,8 @@ def input_error(func):
             return "Give me name please."
         except IncorrectEmail as error:
             return error.message
+        except PhoneValueError as error:
+            return error.message
         except Exception:
             return "Please enter right command"
 

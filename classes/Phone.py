@@ -1,4 +1,5 @@
 from classes.Field import Field
+from helpers.error import PhoneValueError
 
 
 class Phone(Field):
@@ -13,7 +14,7 @@ class Phone(Field):
     @value.setter
     def value(self, value):
         if not (len(str(value)) == 10 and value.isdigit()):
-            raise ValueError(
+            raise PhoneValueError(
                 "Invalid phone number. The number must contain 10 digits.")
 
         self.__value = value

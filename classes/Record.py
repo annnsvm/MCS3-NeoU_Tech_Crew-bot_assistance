@@ -1,6 +1,7 @@
 from classes.Email import Email
 from classes.Name import Name
 from classes.Phone import Phone
+from helpers.error import PhoneValueError
 
 
 class Record:
@@ -26,7 +27,7 @@ class Record:
             self.phones[index] = Phone(new_phone)
             return
 
-        raise ValueError(
+        raise PhoneValueError(
             f"Phone not found")
 
     def find_phone(self, phone):
@@ -34,7 +35,7 @@ class Record:
         for p in self.phones:
             if p == phone:
                 return p
-        raise ValueError(f"Phone not found")
+        raise PhoneValueError(f"Phone not found")
 
     def add_email(self, email):
         self.email = Email(email)
