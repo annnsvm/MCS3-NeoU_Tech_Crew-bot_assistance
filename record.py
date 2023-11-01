@@ -1,2 +1,0 @@
-class AddressBookRecord():
-    pass

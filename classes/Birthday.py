@@ -1,4 +1,4 @@
-from field import Field
+from classes.Field import Field
 
 
 class Birthday(Field):
