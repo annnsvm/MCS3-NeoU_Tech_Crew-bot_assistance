@@ -1,4 +1,5 @@
 from classes.Field import Field
+from helpers.error import NameValueError
 
 
 class Name(Field):
@@ -12,7 +13,8 @@ class Name(Field):
 
     @value.setter
     def value(self, value):
-        if len(str(value)) == 0:
-            raise ValueError("Please enter name")
+        if len(str(value)) <= 1:
+            raise NameValueError(
+                "Please enter correct name. Name must be more than 1 character.")
 
         self.__value = value

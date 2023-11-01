@@ -15,6 +15,8 @@ def input_error(func):
             return error.message
         except PhoneValueError as error:
             return error.message
+        except NameValueError as error:
+            return error.message
         except Exception:
             return "Please enter right command"
 

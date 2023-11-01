@@ -18,3 +18,6 @@ class Phone(Field):
                 "Invalid phone number. The number must contain 10 digits.")
 
         self.__value = value
+
+    def __eq__(self, other):
+        return self.value == other.value

@@ -1,6 +1,7 @@
 from commands.Emails import EmailCommands
 from commands.System import SystemCommands
 from commands.Contacts import ContactsCommands
+from commands.Phone import PhoneCommands
 from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
@@ -24,13 +25,18 @@ def main():
         elif command == "add":
             result = ContactsCommands.add_contact(args, book)
         elif command == "all":
-            result = ContactsCommands.show_all(args, book)
+            result = ContactsCommands.show_all(book)
+        elif command == "show-phone":
+            result = PhoneCommands.show_phone(args, book)
+        elif command == "change-phone":
+            result = PhoneCommands.change_phone(args, book)
         elif command == "add-email":
             result = EmailCommands.add_email(args, book)
         elif command == "show-email":
             result = EmailCommands.show_mail(args, book)
         else:
-            print("Invalid command.")
+            result = SystemCommands.show_invalid()
+
         if (result):
             print(result)
 

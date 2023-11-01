@@ -12,11 +12,11 @@ class ContactsCommands:
             record = Record(name)
             record.add_phone(phone)
             book.add_record(record)
-            return f"{name} was added to your book"
+            return f"{name} is added to the address book"
 
         record.add_phone(phone)
-        return f"New phone was added to {name}'s record"
+        return f"New phone is added to {name}'s record"
 
     @input_error
-    def show_all(args, book):
+    def show_all(book):
         return str(book)
