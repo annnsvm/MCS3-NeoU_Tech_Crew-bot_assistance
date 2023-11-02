@@ -40,10 +40,7 @@ class Record:
             raise PhoneValueError("Phone is not in the address book.")
 
     def add_email(self, email):
-        self.Email(email)
-
-    def show_email(self, email):
-        return self.email
+        self.email = Email(email)
 
     def __str__(self):
         result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
