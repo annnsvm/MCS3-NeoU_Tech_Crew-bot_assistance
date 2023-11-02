@@ -8,6 +8,7 @@ from classes.AddressBook import AddressBook
 
 def main():
     book = AddressBook()
+    book.load()
     print("Welcome to the assistant bot!")
 
     while True:
@@ -17,6 +18,7 @@ def main():
 
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
+            book.save()
             print(result)
             break
 
