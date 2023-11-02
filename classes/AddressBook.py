@@ -1,4 +1,8 @@
+import pickle
 from collections import UserDict
+
+
+FILE_PATH = "./data/address-book.pkl"
 
 
 class AddressBook(UserDict):
@@ -11,6 +15,18 @@ class AddressBook(UserDict):
     def delete(self, name):
         if name in self.data:
             del self.data[name]
+
+    def load(self):
+        try:
+            with open(FILE_PATH, "rb") as file:
+                file_content = pickle.load(file)
+                self.data = file_content
+        except (EOFError, FileNotFoundError, IOError):
+            self.data = {}
+
+    def save(self):
+        with open(FILE_PATH, "wb") as file:
+            pickle.dump(self, file)
 
     def __str__(self):
         result = ""
