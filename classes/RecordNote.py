@@ -2,12 +2,13 @@ from classes.Name import Name
 from classes.Tag import Tag
 from classes.Note import Note
 
+
 class RecordNote:
     def __init__(self, name):
         self.note_name = Name(name)
         self.tags = []
         self.note_text = None
-        
+
     def add_tag(self, tag):
         self.tags.append(Tag(tag))
 
