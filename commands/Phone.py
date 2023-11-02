@@ -11,7 +11,12 @@ class PhoneCommands:
         if not record:
             raise PhoneValueError(f"Name {name} is not in the address book")
 
-        return str(record)
+        if not record.phones:
+            raise PhoneValueError(
+                f"No phone numbers available for {name} contact.")
+
+        phones = ', '.join(p.value for p in record.phones)
+        return f"Phones: {phones}"
 
     @input_error
     def change_phone(args, book):
