@@ -1,4 +1,5 @@
 from classes.Field import Field
+from helpers.error import IncorrectEmail
 
 
 class Email(Field):

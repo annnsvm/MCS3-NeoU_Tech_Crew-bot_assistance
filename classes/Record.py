@@ -8,6 +8,7 @@ class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
+
         self.birthdays = None
         self.address = None
         self.email = None
