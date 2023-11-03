@@ -24,8 +24,10 @@ def main():
 
         elif command == "hello":
             result = SystemCommands.show_greeting()
-        elif command == "add":
+        elif command == "add-contact":
             result = ContactsCommands.add_contact(args, book)
+        elif command == "delete-contact":
+            result = ContactsCommands.delete_contact(args, book)
         elif command == "all-contacts":
             result = ContactsCommands.show_all_contacts(book)
         elif command == "show-phone":

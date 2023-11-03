@@ -16,4 +16,5 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | hello | `hello` | This command displays a greeting message. |
 | close or exit | `close` or `exit` | This command ends the interaction with the assistant bot.  |
 | all-contacts | `all-contacts` | This command displays all the contacts in the address book. |
-| add &lt;name&gt; &lt;phone&gt; | `add Jane 1111111111` | This command adds a new contact to the address book. |
+| add-contact &lt;name&gt; &lt;phone&gt; | `add-contact Jane 1111111111` | This command adds a new contact to the address book. |
+| delete-contact &lt;name&gt; &lt;phone&gt; | `delete-contact Jane` | This command allows to delete a contact from the address book by specifying the name. |
