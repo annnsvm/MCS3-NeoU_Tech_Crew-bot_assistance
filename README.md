@@ -8,7 +8,8 @@ The `Address Book` feature allows a user to store and manage contact information
 The `Notebook` feature lets users create and organize their notes with tags. Tags help users categorize and quickly find their notes, making it a handy tool for keeping thoughts and ideas in order.
 
 ### Technical requirements
-*NOTE: To ensure proper operation, the installation of `PACKAGE_NAME_HERE_TO_ADD` is required.*
+> [!IMPORTANT]
+> *NOTE: To ensure proper operation, the installation of `PACKAGE_NAME_HERE_TO_ADD` is required.*
 
 ### Commands
 | Command | Example | Description |
