@@ -1,3 +1,4 @@
+from commands.Birthday import BirthdayCommands
 from commands.Emails import EmailCommands
 from commands.System import SystemCommands
 from commands.Contacts import ContactsCommands
@@ -15,7 +16,6 @@ def main():
         result = None
         user_input = input("Enter a command: ")
         command, *args = parse_input(user_input)
-
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
             book.save()
@@ -36,6 +36,13 @@ def main():
             result = EmailCommands.add_email(args, book)
         elif command == "show-email":
             result = EmailCommands.show_mail(args, book)
+        elif command == "add-birthday":
+            result = BirthdayCommands.add_birthday(args, book)
+        elif command == "show-birthday":
+            result = BirthdayCommands.show_birthday(args, book)
+        elif command == "birthdays":
+            print(BirthdayCommands.birthdays(book))
+
         else:
             result = SystemCommands.show_invalid()
 

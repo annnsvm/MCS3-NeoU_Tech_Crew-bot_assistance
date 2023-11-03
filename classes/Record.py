@@ -2,6 +2,7 @@ from classes.Email import Email
 from classes.Name import Name
 from classes.Phone import Phone
 from helpers.error import PhoneValueError
+from classes.Birthday import Birthday
 
 
 class Record:
@@ -43,10 +44,17 @@ class Record:
     def add_email(self, email):
         self.email = Email(email)
 
+    def add_birthday(self, birthday):
+        self.birthday = Birthday(birthday)
+        return "Birthday added"
+
     def __str__(self):
         result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
 
         if self.email:
             result += f", email: {str(self.email)}"
+
+        if self.birthday:
+            result += f", birthday: {self.birthday}"
 
         return result
