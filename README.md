@@ -23,7 +23,7 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | change-phone &lt;name&gt; &lt;old phone&gt; &lt;new phone&gt; | `change-phone Jane 1111111111 2222222222` | With this command, the user can change the phone number for a specific contact by specifying the name and the old phone number to a new phone number. |
 | add-email &lt;name&gt; &lt;email&gt; | `add-email Jane test@gmail.com` | This command adds an email address (email) to the specified contact by name. |
 | show-email &lt;name&gt; | `show-email Jane` | This command allows to find and display email for a given contact by their name. |
-| add-address &lt;name&gt; &lt;address&gt; | `add-email Jane test@gmail.com` | This command adds an address to the specified contact by name. |
+| add-address &lt;name&gt; &lt;address&gt; | `add-address Jane ToDo - example` | This command adds an address to the specified contact by name. |
 | show-address &lt;name&gt; | `show-address Jane` | This command allows to find and display address for a given contact by their name. |
 | add-birthday &lt;name&gt; &lt;birthday&gt; | `add-birthday Jane 01.01.2000` | This command adds a birthday date to the specified contact by name. |
 | show-birthday &lt;name&gt; | `show-birthday Jane` | This command allows to find and display birthday for a given contact by their name. |
