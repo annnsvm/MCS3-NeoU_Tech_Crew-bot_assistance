@@ -18,5 +18,5 @@ class ContactsCommands:
         return f"New phone is added to {name}'s record"
 
     @input_error
-    def show_all(book):
+    def show_all_contacts(book):
         return str(book)
