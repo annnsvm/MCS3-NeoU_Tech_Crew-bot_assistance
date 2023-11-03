@@ -21,3 +21,5 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | delete-contact &lt;name&gt; | `delete-contact Jane` | This command allows to delete a contact from the address book by specifying the name. |
 | show-phone &lt;name&gt; | `show-phone Jane` | This command allows to find and display phone numbers for a given contact by their name. |
 | change-phone &lt;name&gt; &lt;old phone&gt; &lt;new phone&gt; | `change-phone Jane 1111111111 2222222222` | With this command, the user can change the phone number for a specific contact by specifying the name and the old phone number to a new phone number. |
+| add-email &lt;name&gt; &lt;email&gt; | `add-email Jane test@gmail.com` | This command adds an email address (email) to the specified contact by name. |
+| show-email &lt;name&gt; | `show-email Jane` | This command allows to find and display email for a given contact by their name. |
