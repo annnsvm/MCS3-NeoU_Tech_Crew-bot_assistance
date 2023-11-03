@@ -59,4 +59,7 @@ class Record:
         if self.email:
             result += f", email: {str(self.email)}"
 
+        if self.address:
+            result += f", address: {str(self.address)}"
+
         return result
