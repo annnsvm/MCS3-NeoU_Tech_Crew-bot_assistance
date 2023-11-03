@@ -17,4 +17,6 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | close or exit | `close` or `exit` | This command ends the interaction with the assistant bot.  |
 | all-contacts | `all-contacts` | This command displays all the contacts in the address book. |
 | add-contact &lt;name&gt; &lt;phone&gt; | `add-contact Jane 1111111111` | This command adds a new contact to the address book. |
-| delete-contact &lt;name&gt; &lt;phone&gt; | `delete-contact Jane` | This command allows to delete a contact from the address book by specifying the name. |
+| delete-contact &lt;name&gt; | `delete-contact Jane` | This command allows to delete a contact from the address book by specifying the name. |
+| show-phone &lt;name&gt; | `show-phone Jane` | This command allows to find and display phone numbers for a given contact by their name. |
+| change-phone &lt;name&gt; &lt;old phone&gt; &lt;new phone&gt; | `change-phone Jane 1111111111 2222222222` | With this command, the user can change the phone number for a specific contact by specifying the name and the old phone number to a new phone number. |
