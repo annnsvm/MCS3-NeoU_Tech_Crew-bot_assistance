@@ -1,3 +1,9 @@
+from prompt_toolkit import PromptSession
+from prompt_toolkit.completion import WordCompleter
+from prompt_toolkit import PromptSession, print_formatted_text, HTML
+from prompt_toolkit.completion import WordCompleter
+from prompt_toolkit.styles import Style
+
 from commands.Birthday import BirthdayCommands
 from commands.Emails import EmailCommands
 from commands.System import SystemCommands
@@ -7,6 +13,22 @@ from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
 
+command_completer = WordCompleter([
+    'add', 'all', 'show-phone', 'change-phone',
+    'add-email', 'show-email', 'add-birthday',
+    'show-birthday', 'birthdays', 'hello',
+    'close', 'exit'
+], ignore_case=True)
+
+style = Style.from_dict({
+    'greeting': 'ansigreen',
+    'error': 'ansired bold',
+    'command': 'ansiblue',
+    'result': 'ansiwhite',
+})
+session = PromptSession(completer=command_completer, style=style)
+
+
 def main():
     book = AddressBook()
     book.load()
@@ -14,7 +36,7 @@ def main():
 
     while True:
         result = None
-        user_input = input("Enter a command: ")
+        user_input = session.prompt("Enter a command: ")
         command, *args = parse_input(user_input)
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
