@@ -29,5 +29,7 @@ class BirthdayCommands:
             return "Birthday not found."
 
     @input_error
+    @staticmethod
     def birthdays(book):
-        return book.get_birthdays_per_week()
+        return book.get_birthdays_for_week()
+        pass

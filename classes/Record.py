@@ -10,7 +10,7 @@ class Record:
         self.name = Name(name)
         self.phones = []
 
-        self.birthdays = None
+        self.birthday = None
         self.address = None
         self.email = None
 
@@ -46,7 +46,7 @@ class Record:
 
     def add_birthday(self, birthday):
         self.birthday = Birthday(birthday)
-        return "Birthday added"
+        # return "Birthday added"
 
     def __str__(self):
         result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
@@ -54,7 +54,7 @@ class Record:
         if self.email:
             result += f", email: {str(self.email)}"
 
-        if self.birthday:
+        if hasattr(self, 'birthday') and self.birthday:
             result += f", birthday: {self.birthday}"
 
         return result

@@ -15,17 +15,12 @@ def input_error(func):
             return error.message
         except PhoneValueError as error:
             return error.message
-        except NameValueError as error:
-            return error.message
-        except BirthdayValueError as error:
-            return error.message
         except Exception:
             return "Please enter right command"
 
     return inner
 
 
-@input_error
 def parse_input(user_input):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
