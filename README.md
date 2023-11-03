@@ -27,4 +27,4 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | show-address &lt;name&gt; | `show-address Jane` | This command allows to find and display address for a given contact by their name. |
 | add-birthday &lt;name&gt; &lt;birthday&gt; | `add-birthday Jane 01.01.2000` | This command adds a birthday date to the specified contact by name. |
 | show-birthday &lt;name&gt; | `show-birthday Jane` | This command allows to find and display birthday for a given contact by their name. |
-| birthdays | `birthdays` | ToDo: add readme for command |
+| birthdays | `birthdays` | `ToDo: fix after task is done` |
