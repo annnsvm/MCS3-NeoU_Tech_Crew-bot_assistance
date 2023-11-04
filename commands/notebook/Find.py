@@ -1,10 +1,10 @@
+from helpers.decorators import input_error
 from classes.notebook.Notebook import Notebook
 from helpers.decorators import note_input_error
 
 
 class FindCommands:
-
-    @note_input_error
+    @input_error
     def get_note(args, book: Notebook):
         note = book.find(args[0])
         if note:
@@ -12,7 +12,7 @@ class FindCommands:
         else:
             return "Note not found."
 
-    @note_input_error
+    @input_error
     def get_all(book: Notebook):
         notes_list = []
         if not book.data:
@@ -21,7 +21,7 @@ class FindCommands:
             notes_list.append(f"{name} : {record}\n")
         return "".join(notes_list)
 
-    @note_input_error
+    @input_error
     def all_tags(book: Notebook):
         tag_list = []
         if not book.data:
@@ -31,7 +31,7 @@ class FindCommands:
                 tag_list.append(tag.value)
         return set(tag_list)
 
-    @note_input_error
+    @input_error
     def find_tagged_notes(args, book: Notebook):
         notes_list = []
         for name, record in book.data.items():
@@ -41,10 +41,11 @@ class FindCommands:
         return notes_list
 
 
-    @note_input_error
+    @input_error
     def show_note(args, book: Notebook):
         my_note = book.find(args[0])
         if my_note and my_note.note_name:
             return my_note.note_text.value
         else:
             return "Note is empty."
+        
