@@ -45,6 +45,7 @@ def note_input_error(func):
             return "Please enter right command"
     return inner
 
+@note_input_error
 def parse_input(user_input):
     cmd = (ParserCommands.cmd_and_string_reader(user_input))[0]
     prep_str = (ParserCommands.cmd_and_string_reader(user_input))[1]
@@ -70,6 +71,7 @@ class ParserCommands:
         cmd = user_input[:separator].strip().lower()
         prep_str = user_input[separator:].strip()
         return cmd, prep_str
+    
 
     @note_input_error
     def string_reader(prep_str):
@@ -82,7 +84,6 @@ class ParserCommands:
             part_list[2] = part_list[2].split(',')
             name = part_list[0].strip()
             if len(name) == 0:
-                print('Note must have name')
                 raise NoteInputError('Note must have name')
             for tag in part_list[2]:
                 if len(tag.strip()) > 0:
