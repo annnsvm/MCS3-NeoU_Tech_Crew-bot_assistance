@@ -31,7 +31,6 @@ def input_error(func):
             return "Please enter right command"
     return inner
 
-@input_error
 def parse_input(user_input):
     cmd = (ParserCommands.cmd_and_string_reader(user_input))[0]
     prep_str = (ParserCommands.cmd_and_string_reader(user_input))[1]
