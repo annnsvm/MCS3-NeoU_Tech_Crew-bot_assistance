@@ -2,7 +2,6 @@ from prompt_toolkit import PromptSession
 from prompt_toolkit.completion import NestedCompleter
 from prompt_toolkit import PromptSession
 from prompt_toolkit.styles import Style
-
 from commands.Birthday import BirthdayCommands
 from commands.Emails import EmailCommands
 from commands.System import SystemCommands
@@ -18,8 +17,16 @@ from commands.notebook.Note import NoteCommands
 from commands.notebook.Tag import TagCommands
 from commands.notebook.Text import TextCommands
 
+INFO_PATH = "./data/info.pkl"
+
+
+def info():
+    with open(INFO_PATH, "r") as file:
+        return "".join(file.readlines())
+
 
 command_completer = NestedCompleter.from_nested_dict({
+    "info": None,
     "hello": None,
     "close": None,
     "exit": None,
@@ -36,6 +43,7 @@ command_completer = NestedCompleter.from_nested_dict({
     "show-birthday": { "<name>": None },
     "birthdays": None,  
 })
+
 
 style = Style.from_dict({
     'completion-menu.completion': 'bg:#feeeb3 #ffffff bold',
@@ -73,6 +81,8 @@ def main():
 
         elif command == "hello":
             result = SystemCommands.show_greeting()
+        elif command == "info":
+            print(info())
         elif command == "add-contact":
             result = ContactsCommands.add_contact(args, book)
         elif command == "delete-contact":
