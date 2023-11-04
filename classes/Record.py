@@ -2,7 +2,7 @@ from classes.Email import Email
 from classes.Name import Name
 from classes.Phone import Phone
 from classes.Address import Address
-from helpers.error import PhoneValueError
+from helpers.error import *
 from classes.Birthday import Birthday
 
 
@@ -47,7 +47,13 @@ class Record:
 
     def add_birthday(self, birthday):
         self.birthday = Birthday(birthday)
-       
+
+    def edit_email(self, new_email):
+        if self.email:
+            self.email.value = new_email
+        else:
+            raise IncorrectEmail("Email is not in the address book.")
+
     def show_email(self):
         return self.email
 

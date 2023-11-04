@@ -31,17 +31,17 @@ command_completer = NestedCompleter.from_nested_dict({
     "close": None,
     "exit": None,
     "all-contacts": None,
-    "add-contact": { "<name> <phone>": None },
-    "delete-contact": { "<name>": None },
-    "show-phone": { "<name>": None },
-    "change-phone": { "<name> <old phone> <new phone>": None },
-    "add-email": { "<name> <email>": None },
-    "show-email": { "<name>": None },
-    "add-address": { "<name> <city> <street> <house number>": None },
-    "show-address": { "<name>": None },
-    "add-birthday": { "<name> <birthday>": None },
-    "show-birthday": { "<name>": None },
-    "birthdays": None,  
+    "add-contact": {"<name> <phone>": None},
+    "delete-contact": {"<name>": None},
+    "show-phone": {"<name>": None},
+    "change-phone": {"<name> <old phone> <new phone>": None},
+    "add-email": {"<name> <email>": None},
+    "show-email": {"<name>": None},
+    "add-address": {"<name> <city> <street> <house number>": None},
+    "show-address": {"<name>": None},
+    "add-birthday": {"<name> <birthday>": None},
+    "show-birthday": {"<name>": None},
+    "birthdays": None,
 })
 
 
@@ -70,7 +70,7 @@ def main():
         try:
             command, *args = parse_input(user_input)
         except ValueError:
-            continue 
+            continue
 
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
@@ -96,7 +96,9 @@ def main():
         elif command == "add-email":
             result = EmailCommands.add_email(args, book)
         elif command == "show-email":
-            result = EmailCommands.show_mail(args, book)
+            result = EmailCommands.show_email(args, book)
+        elif command == "change-email":
+            result = EmailCommands.change_email(args, book)
         elif command == "add-birthday":
             result = BirthdayCommands.add_birthday(args, book)
         elif command == "show-birthday":
@@ -138,4 +140,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
