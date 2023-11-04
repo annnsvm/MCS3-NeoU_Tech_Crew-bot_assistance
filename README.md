@@ -33,3 +33,4 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | add-note &lt;title&gt; "&lt;description&gt;" &lt;tag&gt;, &lt;tag&gt;| `add-note Monday "Meeting with friends" friends, rest` | This command adds a note, description, and tags. They are added optionally. |
 | about-note &lt;title&gt; | `about-note Monday` | This command provides information about a specific note by its title. |
 | replace-note-text &lt;title&gt; "&lt;description&gt;" | `replace-note-text Monday "Meeting with friends - 18.00"` | This command replaces the description of a note by its title with the new text. |
+| add-text-to-note &lt;title&gt; "&lt;description&gt;" | `add-text-to-note Monday "Take board games"` | This command adds new description to a note by its title. |
