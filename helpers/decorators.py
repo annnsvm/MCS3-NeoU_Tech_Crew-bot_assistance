@@ -1,5 +1,5 @@
 from helpers.error import *
-from commands.notebook.Parser import ParserCommands
+from helpers.parser_help import ParserCommands
 
 
 def input_error(func):
