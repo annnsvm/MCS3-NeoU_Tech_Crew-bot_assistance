@@ -21,10 +21,10 @@ class Birthday(Field):
         try:
             birthday_date = datetime.strptime(value, "%d.%m.%Y").date()
         except ValueError:
-            raise DateValueError
+            raise DateValueError(value)
         else:
             if birthday_date > date.today():
-                raise BirthdayValueError
+                raise BirthdayValueError(value)
 
     def __str__(self):
         return self.value

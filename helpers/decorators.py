@@ -19,6 +19,12 @@ def input_error(func):
             return error.message
         except ContactValueError as error:
             return error.message
+        except DateValueError as error:
+            return error.message
+        except BirthdayValueError as error:
+            return error.message
+        except IncorrectAddress as error:
+            return error.message
         except Exception:
             return "Please enter right command"
 

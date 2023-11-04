@@ -1,7 +1,6 @@
 from prompt_toolkit import PromptSession
-from prompt_toolkit.completion import WordCompleter
-from prompt_toolkit import PromptSession, print_formatted_text, HTML
-from prompt_toolkit.completion import WordCompleter
+from prompt_toolkit.completion import NestedCompleter
+from prompt_toolkit import PromptSession
 from prompt_toolkit.styles import Style
 
 from commands.Birthday import BirthdayCommands
@@ -14,19 +13,32 @@ from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
 
-command_completer = WordCompleter([
-    'add', 'all', 'show-phone', 'change-phone',
-    'add-email', 'show-email', 'add-birthday',
-    'show-birthday', 'birthdays', 'hello',
-    'close', 'exit'
-], ignore_case=True)
+command_completer = NestedCompleter.from_nested_dict({
+    "hello": None,
+    "close": None,
+    "exit": None,
+    "all-contacts": None,
+    "add-contact": { "<name> <phone>": None },
+    "delete-contact": { "<name>": None },
+    "show-phone": { "<name>": None },
+    "change-phone": { "<name> <old phone> <new phone>": None },
+    "add-email": { "<name> <email>": None },
+    "show-email": { "<name>": None },
+    "add-address": { "<name> <city> <street> <house number>": None },
+    "show-address": { "<name>": None },
+    "add-birthday": { "<name> <birthday>": None },
+    "show-birthday": { "<name>": None },
+    "birthdays": None,  
+})
 
 style = Style.from_dict({
-    'greeting': 'ansigreen',
-    'error': 'ansired bold',
-    'command': 'ansiblue',
-    'result': 'ansiwhite',
+    'completion-menu.completion': 'bg:#feeeb3 #ffffff bold',
+    'completion-menu.completion.current': 'bg:#b4effd #000000 bold',
+    'scrollbar.background': 'bg:#fdd53f',
+    'scrollbar.button': 'bg:#69dffc',
+    'prompt': '#00a587',
 })
+
 session = PromptSession(completer=command_completer, style=style)
 
 
@@ -38,7 +50,12 @@ def main():
     while True:
         result = None
         user_input = session.prompt("Enter a command: ")
-        command, *args = parse_input(user_input)
+
+        try:
+            command, *args = parse_input(user_input)
+        except ValueError:
+            continue 
+
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
             book.save()

@@ -28,4 +28,4 @@ class EmailCommands:
             raise IncorrectEmail(
                 f"{name} contact does not have email entry")
 
-        return f"Phones: {record.email}"
+        return f"Email: {record.email}"
