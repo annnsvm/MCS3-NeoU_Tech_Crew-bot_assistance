@@ -7,7 +7,6 @@ FILE_PATH = "./data/address-book.pkl"
 
 
 class AddressBook(UserDict):
-
     def add_record(self, record):
         self.data[record.name.value] = record
 
