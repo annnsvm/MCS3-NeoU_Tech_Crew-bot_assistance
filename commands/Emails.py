@@ -32,9 +32,9 @@ class EmailCommands:
     
     @input_error
     def change_email(args, book):
-        name, old_email, new_email = args
+        name, email = args
         record = book.find(name)
         if not record:
             raise ContactValueError(f"{name} is not in the address book")
-        record.edit_email(old_email,new_email)
+        record.add_email(email)
         return f"{name}'s email is updated"
