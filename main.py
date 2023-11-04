@@ -7,10 +7,10 @@ from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
 from classes.notebook.Notebook import Notebook
-from commands.notebook.Find import get_note, get_all, all_tags, find_tagged_notes, show_note
-from commands.notebook.Note import add_note_title, remove_note
-from commands.notebook.Tag import add_tag, remove_tag
-from commands.notebook.Text import replace_note_text, add_note_text
+from commands.notebook.Find import FindCommands
+from commands.notebook.Note import NoteCommands
+from commands.notebook.Tag import TagCommands
+from commands.notebook.Text import TextCommands
 
 
 def main():
@@ -51,27 +51,27 @@ def main():
         elif command == "show-address":
             result = AddressesCommand.show_address(args, book)
         elif command == "add-note":
-            result = add_note_title(args, notebook)
+            result = NoteCommands.add_note_title(args, notebook)
         elif command == "about-note":
-            result = get_note(args, notebook)
+            result = FindCommands.get_note(args, notebook)
         elif command == "replace-note-text":
-            result = replace_note_text(args, notebook)
+            result = TextCommands.replace_note_text(args, notebook)
         elif command == "add-text-to-note":
-            result = add_note_text(args, notebook)
+            result = TextCommands.add_note_text(args, notebook)
         elif command == "all-notes":
-            result = get_all(notebook)
+            result = FindCommands.get_all(notebook)
         elif command == "add-tags":
-            result = add_tag(args, notebook)
+            result = TagCommands.add_tag(args, notebook)
         elif command == "remove-tag":
-            result = remove_tag(args, notebook)
+            result = TagCommands.remove_tag(args, notebook)
         elif command == "remove-note":
-            result = remove_note(args, notebook)
+            result = NoteCommands.remove_note(args, notebook)
         elif command == "show-note":
-            result = show_note(args, notebook)
+            result = FindCommands.show_note(args, notebook)
         elif command == "find-tagged-notes":
-            result = find_tagged_notes(args, notebook)
+            result = FindCommands.find_tagged_notes(args, notebook)
         elif command == "tags":
-            result = all_tags(notebook)
+            result = FindCommands.all_tags(notebook)
         else:
             result = SystemCommands.show_invalid()
 
