@@ -1,4 +1,5 @@
 from helpers.error import *
+from commands.notebook.Parser import cmd_and_string_reader, string_reader, tag_reader
 
 
 def input_error(func):
@@ -25,6 +26,17 @@ def input_error(func):
 
 @input_error
 def parse_input(user_input):
-    cmd, *args = user_input.split()
-    cmd = cmd.strip().lower()
+    cmd = (cmd_and_string_reader(user_input))[0]
+    prep_str = (cmd_and_string_reader(user_input))[1]
+    if cmd == "add-note" or cmd == "replace-note-text" or cmd == "add-text-to-note":
+        *args , = string_reader(prep_str)
+        return cmd, *args
+    elif cmd == "add-tags" or cmd == "remove-tag":
+        *args , = tag_reader(prep_str)
+        return cmd, *args
+    elif cmd == "show-note" or cmd == "remove-note" or cmd == "find-tagged-notes" or cmd == "about-note":
+        return cmd, prep_str
+    else:
+        cmd, *args = user_input.split()
+        cmd = cmd.strip().lower()
     return cmd, *args
