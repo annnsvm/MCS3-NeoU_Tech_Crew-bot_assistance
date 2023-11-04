@@ -1,6 +1,8 @@
+from helpers.decorators import input_error
 from classes.notebook.Notebook import Notebook
 
 class TagCommands:
+    @input_error
     def add_tag(args, book: Notebook):
         note_name, tags = args
         note = book.find(note_name)
@@ -11,6 +13,7 @@ class TagCommands:
             return "There is no note with that name."
 
 
+    @input_error
     def remove_tag(args, book: Notebook):
         name, tag = args
         if not book.find(name):
