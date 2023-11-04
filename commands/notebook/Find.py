@@ -1,5 +1,5 @@
-from helpers.decorators import input_error
 from classes.notebook.Notebook import Notebook
+from helpers.decorators import input_error
 
 
 class FindCommands:
@@ -11,16 +11,14 @@ class FindCommands:
         else:
             return "Note not found."
 
-
     @input_error
     def get_all(book: Notebook):
         notes_list = []
         if not book.data:
             return "Notes list is empty"
         for name, record in book.data.items():
-            notes_list.append(f"{name} : {record}\n")
-        return "".join(notes_list)
-
+            notes_list.append(f"{record}\n")
+        return "".join(notes_list).rstrip()
 
     @input_error
     def all_tags(book: Notebook):
@@ -49,3 +47,4 @@ class FindCommands:
             return my_note.note_text.value
         else:
             return "Note is empty."
+        

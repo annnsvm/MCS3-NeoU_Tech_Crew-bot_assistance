@@ -39,3 +39,8 @@ class DateValueError(Exception):
         super().__init__(*args)
         self.message = f"Wrong birthday date:{value} Please, input DD.MM.YYYY"
 
+
+class NoteInputError(Exception):
+    def __init__(self, message, *args):
+        super().__init__(*args)
+        self.message = message
