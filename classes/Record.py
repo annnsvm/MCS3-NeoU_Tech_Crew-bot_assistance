@@ -1,14 +1,17 @@
 from classes.Email import Email
 from classes.Name import Name
 from classes.Phone import Phone
+from classes.Address import Address
 from helpers.error import PhoneValueError
+from classes.Birthday import Birthday
 
 
 class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
-        self.birthdays = None
+
+        self.birthday = None
         self.address = None
         self.email = None
 
@@ -42,10 +45,28 @@ class Record:
     def add_email(self, email):
         self.email = Email(email)
 
+    def add_birthday(self, birthday):
+        self.birthday = Birthday(birthday)
+       
+    def show_email(self):
+        return self.email
+
+    def add_address(self, address):
+        self.address = Address(address)
+
+    def show_address(self):
+        return self.address
+
     def __str__(self):
         result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
 
         if self.email:
             result += f", email: {str(self.email)}"
+
+        if self.address:
+            result += f", address: {str(self.address)}"
+
+        if hasattr(self, 'birthday') and self.birthday:
+            result += f", birthday: {self.birthday}"
 
         return result

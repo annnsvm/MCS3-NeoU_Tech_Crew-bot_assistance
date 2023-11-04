@@ -4,6 +4,12 @@ from helpers.error import ContactValueError
 
 
 class ContactsCommands:
+
+    def show_all(book):
+        if not book:
+            return "Your phone book is empty."
+        return str(book)
+
     @input_error
     def add_contact(args, book):
         name, phone = args
@@ -30,5 +36,13 @@ class ContactsCommands:
         return f"Contact {name} is deleted"
 
     @input_error
+
     def show_all_contacts(book):
         return str(book)
+
+    def find_contact(args, book):
+        if len(args) != 1:
+            return "Give me name please."
+
+        name = args[0]
+        return book.find_record(name)
