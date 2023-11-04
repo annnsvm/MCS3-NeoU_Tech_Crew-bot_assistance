@@ -2,6 +2,7 @@ from classes.notebook.Note import Note
 from classes.notebook.Name import Name
 from classes.notebook.Tag import Tag
 
+
 class RecordNote:
     def __init__(self, name):
         self.note_name = Name(name)
