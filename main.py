@@ -59,7 +59,7 @@ command_completer = NestedCompleter.from_nested_dict({
 style = Style.from_dict({
     'completion-menu.completion': 'bg:#feeeb3 #ffffff bold',
     'completion-menu.completion.current': 'bg:#b4effd #000000 bold',
-    'scrollbar.background': 'bg:#fdd53f',
+    'scrollbar.background': 'bg:#add8e6',
     'scrollbar.button': 'bg:#69dffc',
     'prompt': '#00a587',
 })
