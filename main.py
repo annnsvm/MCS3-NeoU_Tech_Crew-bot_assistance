@@ -52,6 +52,7 @@ command_completer = NestedCompleter.from_nested_dict({
     "remove-note": {"<title>": None},
     "show-note": {"<title>": None},
     "find-tagged-notes": {"<tag>": None},
+    "tags": None,
 })
 
 

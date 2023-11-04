@@ -39,3 +39,4 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | remove-note &lt;title&gt;  | `remove-note Monday` | This command removes a note by its title. |
 | show-note &lt;title&gt;  | `show-note Monday` | This command shows the description of a note by its title. |
 | find-tagged-notes &lt;tag&gt;  | `find-tagged-notes rest` | This command displays the titles of all notes with this tag. |
+| tags  | `tags` | This command shows all tags. |
