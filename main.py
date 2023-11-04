@@ -107,6 +107,8 @@ def main():
             result = AddressesCommand.add_address(args, book)
         elif command == "show-address":
             result = AddressesCommand.show_address(args, book)
+        elif command == "all-notes":
+            result = FindCommands.get_all(notebook)
         elif command == "add-note":
             result = NoteCommands.add_note_title(args, notebook)
         elif command == "about-note":
@@ -115,8 +117,6 @@ def main():
             result = TextCommands.replace_note_text(args, notebook)
         elif command == "add-text-to-note":
             result = TextCommands.add_note_text(args, notebook)
-        elif command == "all-notes":
-            result = FindCommands.get_all(notebook)
         elif command == "add-tags":
             result = TagCommands.add_tag(args, notebook)
         elif command == "remove-tag":

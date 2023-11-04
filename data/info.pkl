@@ -14,5 +14,5 @@
 | `show-address` [name]                                 | This command allows to find and display address for a given contact by their name.                      |
 | `add-birthday` [name][birthday]                       | This command adds a birthday date to the specified contact by name.                                     |
 | `show-birthday` [name]                                | This command allows to find and display birthday for a given contact by their name.                     |
-| `birthdays`                                           | This command displays all the birthdays for the upcoming week and organizes them by the day of the week.|
-
+| `birthdays`                                           | This command displays all birthdays for the upcoming week and organizes them by the day of the week.    |
+| `all-notes`                                           | This command displays all the notes in the notebook.                                                    |
