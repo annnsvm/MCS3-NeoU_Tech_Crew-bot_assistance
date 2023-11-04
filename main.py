@@ -31,23 +31,23 @@ command_completer = NestedCompleter.from_nested_dict({
     "close": None,
     "exit": None,
     "all-contacts": None,
-    "add-contact": { "<name> <phone>": None },
-    "delete-contact": { "<name>": None },
-    "show-phone": { "<name>": None },
-    "change-phone": { "<name> <old phone> <new phone>": None },
-    "add-email": { "<name> <email>": None },
-    "show-email": { "<name>": None },
-    "add-address": { "<name> <city> <street> <house number>": None },
-    "show-address": { "<name>": None },
-    "add-birthday": { "<name> <birthday>": None },
-    "show-birthday": { "<name>": None },
-    "birthdays": None,  
+    "add-contact": {"<name> <phone>": None},
+    "delete-contact": {"<name>": None},
+    "show-phone": {"<name>": None},
+    "change-phone": {"<name> <old phone> <new phone>": None},
+    "add-email": {"<name> <email>": None},
+    "show-email": {"<name>": None},
+    "add-address": {"<name> <city> <street> <house number>": None},
+    "show-address": {"<name>": None},
+    "add-birthday": {"<name> <birthday>": None},
+    "show-birthday": {"<name>": None},
+    "birthdays": None,
 })
 
 
 style = Style.from_dict({
     'completion-menu.completion': 'bg:#feeeb3 #ffffff bold',
-    'completion-menu.completion.current': 'bg:#b4effd #000000 bold',
+    'completion-menu.completion.current': 'bg:#0000FF #000000 bold',
     'scrollbar.background': 'bg:#fdd53f',
     'scrollbar.button': 'bg:#69dffc',
     'prompt': '#00a587',
@@ -70,7 +70,7 @@ def main():
         try:
             command, *args = parse_input(user_input)
         except ValueError:
-            continue 
+            continue
 
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
@@ -138,4 +138,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

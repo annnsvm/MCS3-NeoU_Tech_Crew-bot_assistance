@@ -1,19 +1,30 @@
 
                             
 
-| Command           		                            | Description                
-|-----------------------------------------------------------|-------------------------------------------------------------|
-| `info`            				            | Show information about commands.                                
-| `hello`          				            | Show a greeting message.                                          
-| `add-contact` [name]    			            | Add a new contact to the address book.                             
-| `delete-contact` [name] [phone] 			    | Delete a contact from the address book.                          
-| `all-contacts`    				            | Show all contacts with phones and birthdays.                      
-| `show-phone`  [name] [phone]    			    | Show the phone number of a specified contact.                      
-| `change-phone` [name] [old-phone][new-phone]	            | Change the phone number of a contact.                             
-| `add-email`  [name] [email]     			    | Add an email address to a contact.                                
-| `show-email` [name]      			            | Show the email address of a contact.                               
-| `add-birthday`  [name] [date] 			    | Add a birthday to a contact.                                      
-| `show-birthday`   				            | Show the birthday of a contact.                                    
-| `birthdays` [name]    				    | Show all birthdays from the address book.                         
-| `add-address` [name] [address]   			    | Add an address to a contact.                                      
-| `show-address` [name]  			            | Show the address of a contact.                                     
+| Command           		                        | Description                
+|-------------------------------------------------------|-----------------------------------------------------------------|
+| `info`            				        | Show information about commands.                                
+| `hello`          				        | Show a greeting message.                                          
+| `add-contact`         [name]    			| Add a new contact to the address book.                             
+| `delete-contact`      [name] [phone] 			| Delete a contact from the address book.                          
+| `all-contacts`    				        | Show all contacts with phones and birthdays.                      
+| `show-phone`          [name] [phone]    	        | Show the phone number of a specified contact.                      
+| `change-phone`        [name] [old-phone][new-phone]	| Change the phone number of a contact.                             
+| `add-email`           [name] [email]     	        | Add an email address to a contact.                                
+| `show-email`          [name]      			| Show the email address of a contact.                               
+| `add-birthday`        [name] [date] 			| Add a birthday to a contact.                                      
+| `show-birthday`   				        | Show the birthday of a contact.                                    
+| `birthdays`           [name]    			| Show all birthdays from the address book.                         
+| `add-address`         [name] [address]   		| Add an address to a contact.                                      
+| `show-address`        [name]  			| Show the address of a contact.                                     
+|`add-note`             [title] ["text"] [tag], [tag]   | Add a note with a title to the notebook.                             
+| `about-note`          [title]   			| Get details about a specific note by title or identifier.            
+| `replace-note-text`  	[title] ["new text"]	        | Replace the text of a specific note.                                
+| `add-text-to-note`    [title] ["text to add"]	        | Add additional text to an existing note.                             
+| `all-notes`          				        | Show all notes in the notebook.                                     
+| `add-tags`            [title] : [tag], [tag]   	| Add tags to a note for categorization or identification.            
+| `remove-tag`          [ title]:[tag]     		| Remove a tag from a note.                                           
+| `remove-note`         [title]     			| Remove a note from the notebook.                                     
+| `show-note`           [title]    			| Display the content of a specific note.                           
+| `find-tagged-notes`   [tag]			        | Find all notes that have a specific tag.                             
+| `tags`               				        | (Description missing in the provided information)       
