@@ -20,3 +20,4 @@
 | `about-note` [title]                                  | This command provides information about a specific note by its title.                                   |
 | `replace-note-text` [title]"[description]"            | This command replaces the description of a note by its title with the new text.                         |
 | `add-text-to-note` [title]"[description]"             | This command adds new description to a note by its title.                                               |
+| `add-tags` [title]:[tag],[tag]                        | This command adds tags to a note by its title.                                                          |

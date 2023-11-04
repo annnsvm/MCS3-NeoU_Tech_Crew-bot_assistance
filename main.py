@@ -47,6 +47,7 @@ command_completer = NestedCompleter.from_nested_dict({
     "about-note": {"<title>": None},
     "replace-note-text": {"<title> '<description>'": None},
     "add-text-to-note": {"<title> '<description>'": None},
+    "add-tags":  {"<title>: <tag>, <tag>": None},
 })
 
 
