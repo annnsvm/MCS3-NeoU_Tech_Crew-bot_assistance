@@ -37,3 +37,4 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | add-tags &lt;title&gt;: &lt;tag&gt;, &lt;tag&gt;  | `add-tags Monday: game, evening` | This command adds tags to a note by its title. |
 | remove-tag &lt;title&gt;: &lt;tag&gt;  | `remove-tag Monday: evening` | This command removes one tag from a note by its title. |
 | remove-note &lt;title&gt;  | `remove-note Monday` | This command removes a note by its title. |
+| show-note &lt;title&gt;  | `show-note Monday` | This command shows the description of a note by its title. |

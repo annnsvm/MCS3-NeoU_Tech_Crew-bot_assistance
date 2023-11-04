@@ -23,4 +23,6 @@
 | `add-tags` [title]:[tag],[tag]                        | This command adds tags to a note by its title.                                                          |
 | `remove-tag` [title]:[tag]                            | This command removes one tag from a note by its title.                                                  |
 | `remove-note` [title]                                 | This command removes a note by its title.                                                               |
+| `show-note` [title]                                   | This command shows the description of a note by its title.                                              |
+ 
 
