@@ -30,3 +30,4 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | show-birthday &lt;name&gt; | `show-birthday Jane` | This command allows to find and display birthday for a given contact by their name. |
 | birthdays | `birthdays` | This command displays all birthdays for the upcoming week and organizes them by the day of the week. |
 | all-notes | `all-notes` | This command displays all the notes in the notebook. |
+| add-note &lt;title&gt; "&lt;description&gt;" &lt;tag&gt;, &lt;tag&gt;| `add-note Monday "Meeting with friends" friends, rest` | This command adds a note, description, and tags. They are added optionally. |

@@ -42,6 +42,8 @@ command_completer = NestedCompleter.from_nested_dict({
     "add-birthday": {"<name> <birthday>": None},
     "show-birthday": {"<name>": None},
     "birthdays": None,
+    "all-notes": None,
+    "add-note": {"<title> '<description>' <tag>, <tag>": None},
 })
 
 
