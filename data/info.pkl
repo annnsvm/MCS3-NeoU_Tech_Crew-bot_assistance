@@ -1,0 +1,19 @@
+
+                            
+
+| Command           		                            | Description                
+|-----------------------------------------------------------|-------------------------------------------------------------|
+| `Info`            				            | Show information about commands.                                
+| `hello`          				            | Show a greeting message.                                          
+| `add-contact` [name]    			            | Add a new contact to the address book.                             
+| `delete-contact` [name] [phone] 			    | Delete a contact from the address book.                          
+| `all-contacts`    				            | Show all contacts with phones and birthdays.                      
+| `show-phone`  [name] [phone]    			    | Show the phone number of a specified contact.                      
+| `change-phone` [name] [old-phone][new-phone]	            | Change the phone number of a contact.                             
+| `add-email`  [name] [email]     			    | Add an email address to a contact.                                
+| `show-email` [name]      			            | Show the email address of a contact.                               
+| `add-birthday`  [name] [date] 			    | Add a birthday to a contact.                                      
+| `show-birthday`   				            | Show the birthday of a contact.                                    
+| `birthdays` [name]    				    | Show all birthdays from the address book.                         
+| `add-address` [name] [address]   			    | Add an address to a contact.                                      
+| `show-address` [name]  			            | Show the address of a contact.                                     

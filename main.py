@@ -3,7 +3,7 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit import PromptSession, print_formatted_text, HTML
 from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.styles import Style
-
+import pickle
 from commands.Birthday import BirthdayCommands
 from commands.Emails import EmailCommands
 from commands.System import SystemCommands
@@ -13,12 +13,18 @@ from commands.Addresses import AddressesCommand
 from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
+INFO_PATH = "./data/info.pkl"
+
+
+def info():
+    with open(INFO_PATH, "r") as file:
+        return "".join(file.readlines())
+
 
 command_completer = WordCompleter([
-    'add', 'all', 'show-phone', 'change-phone',
+    "info", 'add', 'all', 'show-phone', 'change-phone',
     'add-email', 'show-email', 'add-birthday',
     'show-birthday', 'birthdays', 'hello',
-    'close', 'exit'
 ], ignore_case=True)
 
 style = Style.from_dict({
@@ -47,6 +53,8 @@ def main():
 
         elif command == "hello":
             result = SystemCommands.show_greeting()
+        elif command == "info":
+            print(info())
         elif command == "add-contact":
             result = ContactsCommands.add_contact(args, book)
         elif command == "delete-contact":
