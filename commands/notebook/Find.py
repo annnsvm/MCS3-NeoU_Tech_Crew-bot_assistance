@@ -18,7 +18,7 @@ class FindCommands:
         if not book.data:
             return "Notes list is empty"
         for name, record in book.data.items():
-            notes_list.append(f"{name} : {record}\n")
+            notes_list.append(f"{record}\n")
         return "".join(notes_list)
 
     @input_error
