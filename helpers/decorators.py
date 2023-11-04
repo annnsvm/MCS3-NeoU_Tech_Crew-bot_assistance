@@ -18,13 +18,20 @@ def input_error(func):
             return error.message
         except NameValueError as error:
             return error.message
+        except ContactValueError as error:
+            return error.message
+        except DateValueError as error:
+            return error.message
+        except BirthdayValueError as error:
+            return error.message
+        except IncorrectAddress as error:
+            return error.message
         except Exception:
             return "Please enter right command"
 
     return inner
 
 
-@input_error
 def parse_input(user_input):
     cmd = (ParserCommands.cmd_and_string_reader(user_input))[0]
     prep_str = (ParserCommands.cmd_and_string_reader(user_input))[1]

@@ -1,5 +1,5 @@
 from helpers.decorators import input_error
-from helpers.error import PhoneValueError
+from helpers.error import PhoneValueError, ContactValueError
 
 
 class PhoneCommands:
@@ -9,7 +9,7 @@ class PhoneCommands:
         record = book.find(name)
 
         if not record:
-            raise PhoneValueError(f"Name {name} is not in the address book")
+             raise ContactValueError(f"Name {name} is not in the address book")
 
         if not record.phones:
             raise PhoneValueError(
@@ -24,7 +24,7 @@ class PhoneCommands:
         record = book.find(name)
 
         if not record:
-            raise PhoneValueError(f"Name {name} is not in the address book.")
+             raise ContactValueError(f"Name {name} is not in the address book")
 
         record.edit_phone(old_phone, new_phone)
         return f"{name}'s contact is updated"

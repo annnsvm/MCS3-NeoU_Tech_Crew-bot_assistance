@@ -2,15 +2,15 @@ from classes.notebook.Note import Note
 from classes.notebook.Name import Name
 from classes.notebook.Tag import Tag
 
+
 class RecordNote:
     def __init__(self, name):
         self.note_name = Name(name)
         self.tags = []
         self.note_text = None
-        
-    def add_tag(self, tags):
-        for tag in tags:
-            self.tags.append(Tag(tag))
+
+    def add_tag(self, tag):
+        self.tags.append(Tag(tag))
 
     def remove_old_tag(self, tags):
         tag_name = tags[0]
@@ -34,6 +34,6 @@ class RecordNote:
         return "The text has been updated"
 
     def __str__(self):
-        return f"Note name: {self.note_name.value}\
-        tags: {', '.join(t.value for t in self.tags)}, \
+        return f"Note name: {self.note_name.value},\
+        tags: {'; '.join(t.value for t in self.tags)}, \
         Note: {self.note_text.value if self.note_text else 'No notes'}"
