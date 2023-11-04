@@ -18,3 +18,4 @@
 | `all-notes`                                           | This command displays all the notes in the notebook.                                                    |
 | `add-note` [title]"[description]"[tag],[tag]          | This command adds a note, description, and tags. They are added optionally.                             |
 | `about-note` [title]                                  | This command provides information about a specific note by its title.                                   |
+| `replace-note-text` [title]"[description]"            | This command replaces the description of a note by its title with the new text.                         |
