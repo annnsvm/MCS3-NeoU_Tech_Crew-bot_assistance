@@ -14,6 +14,7 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 ### Commands
 | Command | Example | Description |
 |:-------|:-------:|:-----------:|
+| info | `info` | This command displays all commands. |
 | hello | `hello` | This command displays a greeting message. |
 | close or exit | `close` or `exit` | This command ends the interaction with the assistant bot.  |
 | all-contacts | `all-contacts` | This command displays all the contacts in the address book. |
@@ -27,4 +28,15 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 | show-address &lt;name&gt; | `show-address Jane` | This command allows to find and display address for a given contact by their name. |
 | add-birthday &lt;name&gt; &lt;birthday&gt; | `add-birthday Jane 01.01.2000` | This command adds a birthday date to the specified contact by name. |
 | show-birthday &lt;name&gt; | `show-birthday Jane` | This command allows to find and display birthday for a given contact by their name. |
-| birthdays | `birthdays` | This command displays all the birthdays for the upcoming week and organizes them by the day of the week. |
+| birthdays | `birthdays` | This command displays all birthdays for the upcoming week and organizes them by the day of the week. |
+| all-notes | `all-notes` | This command displays all the notes in the notebook. |
+| add-note &lt;title&gt; "&lt;description&gt;" &lt;tag&gt;, &lt;tag&gt;| `add-note Monday "Meeting with friends" friends, rest` | This command adds a note, description, and tags. They are added optionally. |
+| about-note &lt;title&gt; | `about-note Monday` | This command provides information about a specific note by its title. |
+| replace-note-text &lt;title&gt; "&lt;description&gt;" | `replace-note-text Monday "Meeting with friends - 18.00"` | This command replaces the description of a note by its title with the new text. |
+| add-text-to-note &lt;title&gt; "&lt;description&gt;" | `add-text-to-note Monday "Take board games"` | This command adds new description to a note by its title. |
+| add-tags &lt;title&gt;: &lt;tag&gt;, &lt;tag&gt;  | `add-tags Monday: game, evening` | This command adds tags to a note by its title. |
+| remove-tag &lt;title&gt;: &lt;tag&gt;  | `remove-tag Monday: evening` | This command removes one tag from a note by its title. |
+| remove-note &lt;title&gt;  | `remove-note Monday` | This command removes a note by its title. |
+| show-note &lt;title&gt;  | `show-note Monday` | This command shows the description of a note by its title. |
+| find-tagged-notes &lt;tag&gt;  | `find-tagged-notes rest` | This command displays the titles of all notes with this tag. |
+| tags  | `tags` | This command shows all tags. |

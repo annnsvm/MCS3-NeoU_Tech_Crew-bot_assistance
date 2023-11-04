@@ -42,6 +42,17 @@ command_completer = NestedCompleter.from_nested_dict({
     "add-birthday": {"<name> <birthday>": None},
     "show-birthday": {"<name>": None},
     "birthdays": None,
+    "all-notes": None,
+    "add-note": {"<title> '<description>' <tag>, <tag>": None},
+    "about-note": {"<title>": None},
+    "replace-note-text": {"<title> '<description>'": None},
+    "add-text-to-note": {"<title> '<description>'": None},
+    "add-tags":  {"<title>: <tag>, <tag>": None},
+    "remove-tag": {"<title>: <tag>": None},
+    "remove-note": {"<title>": None},
+    "show-note": {"<title>": None},
+    "find-tagged-notes": {"<tag>": None},
+    "tags": None,
 })
 
 
@@ -104,11 +115,13 @@ def main():
         elif command == "show-birthday":
             result = BirthdayCommands.show_birthday(args, book)
         elif command == "birthdays":
-            print(BirthdayCommands.birthdays(book))
+            result =  BirthdayCommands.birthdays(book)
         elif command == "add-address":
             result = AddressesCommand.add_address(args, book)
         elif command == "show-address":
             result = AddressesCommand.show_address(args, book)
+        elif command == "all-notes":
+            result = FindCommands.get_all(notebook)
         elif command == "add-note":
             result = NoteCommands.add_note_title(args, notebook)
         elif command == "about-note":
@@ -117,8 +130,6 @@ def main():
             result = TextCommands.replace_note_text(args, notebook)
         elif command == "add-text-to-note":
             result = TextCommands.add_note_text(args, notebook)
-        elif command == "all-notes":
-            result = FindCommands.get_all(notebook)
         elif command == "add-tags":
             result = TagCommands.add_tag(args, notebook)
         elif command == "remove-tag":
