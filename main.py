@@ -102,7 +102,7 @@ def main():
         elif command == "show-birthday":
             result = BirthdayCommands.show_birthday(args, book)
         elif command == "birthdays":
-            print(BirthdayCommands.birthdays(book))
+            result =  BirthdayCommands.birthdays(book)
         elif command == "add-address":
             result = AddressesCommand.add_address(args, book)
         elif command == "show-address":

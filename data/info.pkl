@@ -1,19 +1,18 @@
+| Command                                               | Description                                                                                             |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| `info`                                                | This command displays all commands.                                                                     |
+| `hello`                                               | This command displays a greeting message.                                                               |
+| `close` or `exit`                                     | This command ends the interaction with the assistant bot.                                               |
+| `all-contacts`                                        | This command displays all the contacts in the address book.                                             |
+| `add-contact` [name][phone]                           | This command adds a new contact to the address book.                                                    |
+| `delete-contact` [name]                               | This command allows to delete a contact from the address book by specifying the name.                   |
+| `show-phone` [name]                                   | This command allows to find and display phone numbers for a given contact by their name.                |
+| `change-phone` [name][old-phone][new-phone]           | Change the phone number of a contact.                                                                   |
+| `add-email` [name][email]                             | This command adds an email to the specified contact by name.                                            |
+| `show-email` [name]                                   | This command allows to find and display email for a given contact by their name.                        | 
+| `add-address` [name][city][street][house number]      | This command adds an address to the specified contact by name.                                          |
+| `show-address` [name]                                 | This command allows to find and display address for a given contact by their name.                      |
+| `add-birthday` [name][birthday]                       | This command adds a birthday date to the specified contact by name.                                     |
+| `show-birthday` [name]                                | This command allows to find and display birthday for a given contact by their name.                     |
+| `birthdays`                                           | This command displays all the birthdays for the upcoming week and organizes them by the day of the week.|
 
-                            
-
-| Command           		                            | Description                
-|-----------------------------------------------------------|-------------------------------------------------------------|
-| `info`            				            | Show information about commands.                                
-| `hello`          				            | Show a greeting message.                                          
-| `add-contact` [name]    			            | Add a new contact to the address book.                             
-| `delete-contact` [name] [phone] 			    | Delete a contact from the address book.                          
-| `all-contacts`    				            | Show all contacts with phones and birthdays.                      
-| `show-phone`  [name] [phone]    			    | Show the phone number of a specified contact.                      
-| `change-phone` [name] [old-phone][new-phone]	            | Change the phone number of a contact.                             
-| `add-email`  [name] [email]     			    | Add an email address to a contact.                                
-| `show-email` [name]      			            | Show the email address of a contact.                               
-| `add-birthday`  [name] [date] 			    | Add a birthday to a contact.                                      
-| `show-birthday`   				            | Show the birthday of a contact.                                    
-| `birthdays` [name]    				    | Show all birthdays from the address book.                         
-| `add-address` [name] [address]   			    | Add an address to a contact.                                      
-| `show-address` [name]  			            | Show the address of a contact.                                     
