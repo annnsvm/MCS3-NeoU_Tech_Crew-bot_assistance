@@ -22,6 +22,12 @@ class NameValueError(Exception):
         self.message = message
 
 
+class ContactValueError(Exception):
+    def __init__(self, message, *args):
+        super().__init__(*args)
+        self.message = message
+
+
 class BirthdayValueError(Exception):
     def __init__(self, value, *args):
         super().__init__(*args)

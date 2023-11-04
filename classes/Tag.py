@@ -1,5 +1,6 @@
 from classes.Field import Field
 
+
 class Tag(Field):
     def __init__(self, value):
         if self.validate(value):

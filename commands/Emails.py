@@ -1,6 +1,6 @@
 from helpers.decorators import input_error
 from helpers.error import IncorrectEmail
-
+from helpers.error import ContactValueError
 
 class EmailCommands:
     @input_error
@@ -11,8 +11,7 @@ class EmailCommands:
         record = book.find(name)
 
         if not record:
-            raise IncorrectEmail(
-                "Please enter correct email.")
+            raise ContactValueError(f"Name {name} is not in the address book")
 
         record.add_email(email)
         return "Email was successfully added"
@@ -23,7 +22,7 @@ class EmailCommands:
         record = book.find(name)
 
         if not record:
-            raise IncorrectEmail(f"Name {name} is not in the address book")
+            raise ContactValueError(f"Name {name} is not in the address book")
 
         if not record.email:
             raise IncorrectEmail(

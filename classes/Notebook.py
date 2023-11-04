@@ -1,5 +1,6 @@
 from collections import UserDict
 
+
 class Notebook(UserDict):
     def add_record(self, record):
         self.data[record.note_name.value] = record
