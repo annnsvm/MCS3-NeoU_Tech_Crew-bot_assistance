@@ -42,13 +42,25 @@ command_completer = NestedCompleter.from_nested_dict({
     "add-birthday": {"<name> <birthday>": None},
     "show-birthday": {"<name>": None},
     "birthdays": None,
+    "add-note": {"<title> <text> <tag>, <tag>": None},
+    "about-note": {"<title>": None},
+    "replace-note-text": {"<title> <new text>": None},
+    "add-text-to-note": {"<title> <text to add>": None},
+    "all-notes": None,
+    "add-tags": {"<title> : <tag>, <tag>": None},
+    "remove-tag": {"<title> : <tag>": None},
+    "remove-note": {"<title>": None},
+    "show-note": {"<title>": None},
+    "find-tagged-notes": {"<tag>": None},
+    "tags": None
+
 })
 
 
 style = Style.from_dict({
     'completion-menu.completion': 'bg:#feeeb3 #ffffff bold',
-    'completion-menu.completion.current': 'bg:#0000FF #000000 bold',
-    'scrollbar.background': 'bg:#fdd53f',
+    'completion-menu.completion.current': 'bg:#b4effd #000000 bold',
+    'scrollbar.background': 'bg:#add8e6',
     'scrollbar.button': 'bg:#69dffc',
     'prompt': '#00a587',
 })
