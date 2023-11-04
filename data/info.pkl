@@ -24,5 +24,7 @@
 | `remove-tag` [title]:[tag]                            | This command removes one tag from a note by its title.                                                  |
 | `remove-note` [title]                                 | This command removes a note by its title.                                                               |
 | `show-note` [title]                                   | This command shows the description of a note by its title.                                              |
+| `find-tagged-notes` [tag]                             | This command displays the titles of all notes with this tag.                                            |
+
  
 
