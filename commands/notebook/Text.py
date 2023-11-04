@@ -1,7 +1,8 @@
-from helpers.decorators import input_error
 from classes.notebook.Notebook import Notebook
+from helpers.decorators import input_error
 
 class TextCommands:
+
     @input_error
     def replace_note_text(args, book: Notebook):
         note_name = args[0]
@@ -12,7 +13,6 @@ class TextCommands:
             return "Note text replaced"
         else:
             return "Note not found"
-
 
     @input_error
     def add_note_text(args, book: Notebook):
