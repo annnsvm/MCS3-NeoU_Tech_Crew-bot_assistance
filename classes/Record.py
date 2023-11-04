@@ -1,6 +1,7 @@
 from classes.Email import Email
 from classes.Name import Name
 from classes.Phone import Phone
+from classes.Address import Address
 from helpers.error import PhoneValueError
 from classes.Birthday import Birthday
 
@@ -46,7 +47,15 @@ class Record:
 
     def add_birthday(self, birthday):
         self.birthday = Birthday(birthday)
-        # return "Birthday added"
+       
+    def show_email(self):
+        return self.email
+
+    def add_address(self, address):
+        self.address = Address(address)
+
+    def show_address(self):
+        return self.address
 
     def __str__(self):
         result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"

@@ -9,6 +9,7 @@ from commands.Emails import EmailCommands
 from commands.System import SystemCommands
 from commands.Contacts import ContactsCommands
 from commands.Phone import PhoneCommands
+from commands.Addresses import AddressesCommand
 from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
@@ -64,7 +65,10 @@ def main():
             result = BirthdayCommands.show_birthday(args, book)
         elif command == "birthdays":
             print(BirthdayCommands.birthdays(book))
-
+        elif command == "add-address":
+            result = AddressesCommand.add_address(args, book)
+        elif command == "show-address":
+            result = AddressesCommand.show_address(args, book)
         else:
             result = SystemCommands.show_invalid()
 
