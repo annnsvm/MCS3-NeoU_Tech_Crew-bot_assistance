@@ -12,6 +12,12 @@ from commands.Addresses import AddressesCommand
 from helpers.decorators import parse_input
 from classes.AddressBook import AddressBook
 
+from classes.notebook.Notebook import Notebook
+from commands.notebook.Find import FindCommands
+from commands.notebook.Note import NoteCommands
+from commands.notebook.Tag import TagCommands
+from commands.notebook.Text import TextCommands
+
 
 command_completer = NestedCompleter.from_nested_dict({
     "hello": None,
@@ -45,6 +51,8 @@ session = PromptSession(completer=command_completer, style=style)
 def main():
     book = AddressBook()
     book.load()
+    notebook = Notebook()
+    notebook.load()
     print("Welcome to the assistant bot!")
 
     while True:
@@ -59,6 +67,7 @@ def main():
         if command in ["close", "exit"]:
             result = SystemCommands.show_goodbye()
             book.save()
+            notebook.save()
             print(result)
             break
 
@@ -88,6 +97,28 @@ def main():
             result = AddressesCommand.add_address(args, book)
         elif command == "show-address":
             result = AddressesCommand.show_address(args, book)
+        elif command == "add-note":
+            result = NoteCommands.add_note_title(args, notebook)
+        elif command == "about-note":
+            result = FindCommands.get_note(args, notebook)
+        elif command == "replace-note-text":
+            result = TextCommands.replace_note_text(args, notebook)
+        elif command == "add-text-to-note":
+            result = TextCommands.add_note_text(args, notebook)
+        elif command == "all-notes":
+            result = FindCommands.get_all(notebook)
+        elif command == "add-tags":
+            result = TagCommands.add_tag(args, notebook)
+        elif command == "remove-tag":
+            result = TagCommands.remove_tag(args, notebook)
+        elif command == "remove-note":
+            result = NoteCommands.remove_note(args, notebook)
+        elif command == "show-note":
+            result = FindCommands.show_note(args, notebook)
+        elif command == "find-tagged-notes":
+            result = FindCommands.find_tagged_notes(args, notebook)
+        elif command == "tags":
+            result = FindCommands.all_tags(notebook)
         else:
             result = SystemCommands.show_invalid()
 
@@ -97,3 +128,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
