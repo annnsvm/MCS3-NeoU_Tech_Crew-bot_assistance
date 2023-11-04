@@ -25,27 +25,13 @@ def input_error(func):
             return error.message
         except IncorrectAddress as error:
             return error.message
-        except Exception:
-            return "Please enter right command"
-    return inner
-
-def note_input_error(func):
-    def inner(*args, **kwargs):
-        try:
-            return func(*args, **kwargs)
-        except ValueError:
-            return "ValueError: Incorrect data entered"
-        except KeyError:
-            return "KeyError: Incorrect data entered"
-        except IndexError:
-            return "IndexError: Incorrect data entered"
         except NoteInputError as error:
             return error.message
         except Exception:
             return "Please enter right command"
     return inner
 
-@note_input_error
+@input_error
 def parse_input(user_input):
     cmd = (ParserCommands.cmd_and_string_reader(user_input))[0]
     prep_str = (ParserCommands.cmd_and_string_reader(user_input))[1]
@@ -65,7 +51,7 @@ def parse_input(user_input):
 
 class ParserCommands:
 
-    @note_input_error
+    @input_error
     def cmd_and_string_reader(user_input):
         separator = user_input.find(" ")
         cmd = user_input[:separator].strip().lower()
@@ -73,7 +59,7 @@ class ParserCommands:
         return cmd, prep_str
     
 
-    @note_input_error
+    @input_error
     def string_reader(prep_str):
         tags = []
         text = ""
@@ -95,7 +81,7 @@ class ParserCommands:
         *args , = name, text, tags
         return *args ,
 
-    @note_input_error
+    @input_error
     def tag_reader(prep_str):
             prep_list = prep_str.split(':')
             args = []

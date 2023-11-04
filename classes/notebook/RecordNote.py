@@ -35,7 +35,7 @@ class RecordNote:
         return "The text has been updated"
 
     def __str__(self):
-        title_row = "|{:<30}|{:<30}|{:<40}".format(f" title: {self.note_name.value} ", \
+        row = "|{:<30}|{:<30}|{:<40}".format(f" title: {self.note_name.value} ", \
         f" tags: {', '.join(t.value for t in self.tags)}", f" note: {self.note_text.value if self.note_text else 'No notes'}")
-        return title_row + "\n"
+        return row
 
