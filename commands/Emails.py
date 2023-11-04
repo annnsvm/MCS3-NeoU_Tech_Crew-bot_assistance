@@ -17,7 +17,7 @@ class EmailCommands:
         return "Email was successfully added"
 
     @input_error
-    def show_mail(args, book):
+    def show_email(args, book):
         name = args[0]
         record = book.find(name)
 
@@ -29,3 +29,12 @@ class EmailCommands:
                 f"{name} contact does not have email entry")
 
         return f"Email: {record.email}"
+    
+    @input_error
+    def change_email(args, book):
+        name, email = args
+        record = book.find(name)
+        if not record:
+            raise ContactValueError(f"{name} is not in the address book")
+        record.add_email(email)
+        return f"{name}'s email is updated"
