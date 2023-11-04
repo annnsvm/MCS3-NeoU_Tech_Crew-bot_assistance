@@ -3,7 +3,7 @@
 
 | Command           		                            | Description                
 |-----------------------------------------------------------|-------------------------------------------------------------|
-| `Info`            				            | Show information about commands.                                
+| `info`            				            | Show information about commands.                                
 | `hello`          				            | Show a greeting message.                                          
 | `add-contact` [name]    			            | Add a new contact to the address book.                             
 | `delete-contact` [name] [phone] 			    | Delete a contact from the address book.                          
