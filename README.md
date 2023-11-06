@@ -11,6 +11,14 @@ The `Notebook` feature lets users create and organize their notes with tags. Tag
 > [!IMPORTANT]
 > *NOTE: To ensure proper operation, the installation of `prompt_toolkit` is required.*
 
+### Install as a package
+`python3 -m venv .env`
+
+Linux, Mac OS: `source .env/bin/activate`  
+Windows: `.env/Scripts/activate`
+
+`pip install .`
+
 ### Commands
 | Command | Example | Description |
 |:-------|:-------:|:-----------:|
