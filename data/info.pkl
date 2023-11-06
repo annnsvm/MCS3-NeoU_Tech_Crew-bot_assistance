@@ -1,6 +1,6 @@
 | Command                                               | Description                                                                                             |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `info`                                                | This command displays all commands.                                                                     |
+| `help`                                                | This command displays all commands.                                                                     |
 | `hello`                                               | This command displays a greeting message.                                                               |
 | `close` or `exit`                                     | This command ends the interaction with the assistant bot.                                               |
 | `all-contacts`                                        | This command displays all the contacts in the address book.                                             |
