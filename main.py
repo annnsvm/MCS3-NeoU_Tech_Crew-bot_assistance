@@ -26,7 +26,7 @@ def info():
 
 
 command_completer = NestedCompleter.from_nested_dict({
-    "info": None,
+    "help": None,
     "hello": None,
     "close": None,
     "exit": None,
@@ -92,7 +92,7 @@ def main():
 
         elif command == "hello":
             result = SystemCommands.show_greeting()
-        elif command == "info":
+        elif command == "help":
             print(info())
         elif command == "add-contact":
             result = ContactsCommands.add_contact(args, book)
