@@ -22,7 +22,7 @@ Windows: `.env/Scripts/activate`
 ### Commands
 | Command | Example | Description |
 |:-------|:-------:|:-----------:|
-| info | `info` | This command displays all commands. |
+| help | `help` | This command displays all commands. |
 | hello | `hello` | This command displays a greeting message. |
 | close or exit | `close` or `exit` | This command ends the interaction with the assistant bot.  |
 | all-contacts | `all-contacts` | This command displays all the contacts in the address book. |
