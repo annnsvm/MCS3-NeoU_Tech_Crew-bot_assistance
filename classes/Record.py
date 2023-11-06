@@ -58,7 +58,7 @@ class Record:
         return self.address
 
     def __str__(self):
-        result = f"Contact name: {self.name.value}, phones: {', '.join(p.value for p in self.phones)}"
+        result = f"Contact name: {self.name.value}, phones: {', '.join(f'({p.value[:3]})-{p.value[3:6]}-{p.value[6:8]}-{p.value[8:10]}' for p in self.phones)}"
 
         if self.email:
             result += f", email: {str(self.email)}"
