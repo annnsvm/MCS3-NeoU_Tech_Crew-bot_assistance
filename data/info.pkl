@@ -1,31 +1,28 @@
-| Command                                               | Description                                                                                             |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `help`                                                | This command displays all commands.                                                                     |
-| `hello`                                               | This command displays a greeting message.                                                               |
-| `close` or `exit`                                     | This command ends the interaction with the assistant bot.                                               |
-| `all-contacts`                                        | This command displays all the contacts in the address book.                                             |
-| `add-contact` [name][phone]                           | This command adds a new contact to the address book.                                                    |
-| `delete-contact` [name]                               | This command allows to delete a contact from the address book by specifying the name.                   |
-| `show-phone` [name]                                   | This command allows to find and display phone numbers for a given contact by their name.                |
-| `change-phone` [name][old-phone][new-phone]           | Change the phone number of a contact.                                                                   |
-| `add-email` [name][email]                             | This command adds an email to the specified contact by name.                                            |
-| `show-email` [name]                                   | This command allows to find and display email for a given contact by their name.                        | 
-| `add-address` [name][city][street][house number]      | This command adds an address to the specified contact by name.                                          |
-| `show-address` [name]                                 | This command allows to find and display address for a given contact by their name.                      |
-| `add-birthday` [name][birthday]                       | This command adds a birthday date to the specified contact by name.                                     |
-| `show-birthday` [name]                                | This command allows to find and display birthday for a given contact by their name.                     |
-| `birthdays`                                           | This command displays all birthdays for the upcoming week and organizes them by the day of the week.    |
-| `all-notes`                                           | This command displays all the notes in the notebook.                                                    |
-| `add-note` [title]"[description]"[tag],[tag]          | This command adds a note, description, and tags. They are added optionally.                             |
-| `about-note` [title]                                  | This command provides information about a specific note by its title.                                   |
-| `replace-note-text` [title]"[description]"            | This command replaces the description of a note by its title with the new text.                         |
-| `add-text-to-note` [title]"[description]"             | This command adds new description to a note by its title.                                               |
-| `add-tags` [title]:[tag],[tag]                        | This command adds tags to a note by its title.                                                          |
-| `remove-tag` [title]:[tag]                            | This command removes one tag from a note by its title.                                                  |
-| `remove-note` [title]                                 | This command removes a note by its title.                                                               |
-| `show-note` [title]                                   | This command shows the description of a note by its title.                                              |
-| `find-tagged-notes` [tag]                             | This command displays the titles of all notes with this tag.                                            |
-| `tags`                                                | This command shows all tags.                                                                            |
-
- 
-
+| Command                                          | Description                                                                                         |
+|--------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| `help`                                           | This command displays all commands.                                                                 |
+| `hello`                                          | This command displays a greeting message.                                                           |
+| `close` or `exit`                                | This command ends the interaction with the assistant bot.                                           |
+| `all-contacts`                                   | This command displays all the contacts in the address book.                                         |
+| `add-contact` [name][phone]                      | This command adds a new contact to the address book.                                                |
+| `delete-contact` [name]                          | This command allows to delete a contact from the address book by specifying the name.               |
+| `show-phone` [name]                              | This command allows to find and display phone numbers for a given contact by their name.            |
+| `change-phone` [name][old-phone][new-phone]      | Change the phone number of a contact.                                                               |
+| `add-email` [name][email]                        | This command adds an email to the specified contact by name.                                        |
+| `show-email` [name]                              | This command allows to find and display email for a given contact by their name.                    | 
+| `add-address` [name][city][street][house number] | This command adds an address to the specified contact by name.                                      |
+| `show-address` [name]                            | This command allows to find and display address for a given contact by their name.                  |
+| `add-birthday` [name][birthday]                  | This command adds a birthday date to the specified contact by name.                                 |
+| `show-birthday` [name]                           | This command allows to find and display birthday for a given contact by their name.                 |
+| `birthdays`                                      | This command displays all birthdays for the upcoming week and organizes them by the day of the week.|
+| `all-notes`                                      | This command displays all the notes in the notebook.                                                |
+| `add-note` [title]"[description]"[tag],[tag]     | This command adds a note, description, and tags. They are added optionally.                         |
+| `about-note` [title]                             | This command provides information about a specific note by its title.                               |
+| `replace-note-text` [title]"[description]"       | This command replaces the description of a note by its title with the new text.                     |
+| `add-text-to-note` [title]"[description]"        | This command adds new description to a note by its title.                                           |
+| `add-tags` [title]:[tag],[tag]                   | This command adds tags to a note by its title.                                                      |
+| `remove-tag` [title]:[tag]                       | This command removes one tag from a note by its title.                                              |
+| `remove-note` [title]                            | This command removes a note by its title.                                                           |
+| `show-note` [title]                              | This command shows the description of a note by its title.                                          |
+| `find-tagged-notes` [tag]                        | This command displays the titles of all notes with this tag.                                        |
+| `tags`                                           | This command shows all tags.                                                                        |
